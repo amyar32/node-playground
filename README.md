@@ -59,6 +59,8 @@ Boa edan
 ```
 ### Etc 
 ```
+- [ ] CLI App
+- [ ] Native app
 - [ ] GraphQL?
 - [ ] Deno?
 - [ ] ...
