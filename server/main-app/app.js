@@ -1,5 +1,4 @@
 const path = require("path");
-
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -27,6 +26,6 @@ app.use(errorController.get404);
 
 //menghubungkan ke database
 mongoConnect(() => {
-    app.listen(3000);
-    console.log("Listening on port 3000");
+  app.listen(3000);
+  console.log("Listenin on port 3000");
 });
