@@ -4,7 +4,7 @@ const mongodb = require("mongodb");
 const getDb = require("../util/database").getDb;
 
 class Product {
-  constructor(title, price, description, imageUrl, id) {
+  constructor(title, price, description, imageUrl, id, userId) {
     this.title = title;
     this.price = price;
     this.description = description;
@@ -13,6 +13,8 @@ class Product {
     // apabila ada tidak ada id di controller yang menginisiasi Class ini maka, akan membuat produk baru
     // dan apabila ada maka akan mengupdate berdasarkan id yang dibawanya
     this._id = id ? new mongodb.ObjectId(id) : null;
+
+    this.userId = userId;
   }
 
   save() {
@@ -45,7 +47,6 @@ class Product {
       .find()
       .toArray()
       .then((products) => {
-        console.log(products);
         return products;
       })
       .catch((err) => {
