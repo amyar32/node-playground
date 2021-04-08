@@ -7,6 +7,6 @@ Practicing repo
 - Basic programming knowledge
 - JS Syntax
 
-## How to User
+## How to Use
 
 Just `npm install in what folder do you want to use`
