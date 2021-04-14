@@ -1,6 +1,6 @@
 # NodeJS-Playground
 
-Practicing repo
+Practicing repo, rip my exposed mongodb uri
 
 ## Requirements
 
@@ -9,4 +9,4 @@ Practicing repo
 
 ## How to Use
 
-Just `npm install in what folder do you want to use`
+Just `npm install` in folder that contain package.json
