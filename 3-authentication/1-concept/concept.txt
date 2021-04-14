@@ -1,0 +1,2 @@
+install bcryptjs to hash password
+install csurf for csrf attack. include CSRF Token in viewss
