@@ -41,6 +41,30 @@ app.use((req, res, next) => {
 - pakai JSON.stringfy ketika akan post karena servernya menerima json
 
 6. server-side validation
+- npm install --save express-validator
+- import {body} ada di file route
+- import {validationResult} ada di controller
+
+7. setting model atau db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // cors setting
 app.use((req, res, next) => {

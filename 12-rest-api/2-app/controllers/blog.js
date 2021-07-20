@@ -1,3 +1,6 @@
+// server validation
+const { validationResult } = require("express-validator");
+
 exports.getBlogs = (req, res, next) => {
   res.status(200).json({
     posts: [
@@ -17,12 +20,27 @@ exports.getBlogs = (req, res, next) => {
 };
 
 exports.postBlog = (req, res, next) => {
+  // server validation
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res
+      .status(422)
+      .json({ message: "Validation Failed", errors: errors.array() });
+  }
+
   const title = req.body.title;
   const image = req.body.image;
   const author = req.body.author;
   const content = req.body.content;
   res.status(201).json({
     message: " Post created successfully",
-    pst: { id: new Date().toISOString(), title, image, author, content },
+    data: {
+      _id: new Date().toISOString(),
+      title,
+      image,
+      author,
+      content,
+      date: new Date(),
+    },
   });
 };
